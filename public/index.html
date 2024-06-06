@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de Movimento de Capital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <p id="text-header">Consulta de Movimento de Capital</p>
+  </header>
+  <div class="container">
+
+    <form id="consultaForm" action="/buscar" method="POST">
+      <label for="nr_matricula" class="label-home">Número de Matrícula:</label>
+      <input type="text" id="nr_matricula" class="input-field"  name="nr_matricula" required>
+
+      <label for="data_inicio" class="label-home">Data Início:</label>
+      <input type="date" class='date input-field'  id="data_inicio" name="data_inicio" required>
+
+      <label for="data_fim" class="label-home">Data Fim:</label>
+      <input type="date" class='date input-field' id="data_fim" name="data_fim" required>
+      
+      <button type="submit" id="button-search">Buscar</button>
+    </form>
+
+    <div id="tabelaResultado"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
